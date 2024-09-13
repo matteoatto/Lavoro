@@ -1,0 +1,13 @@
+.footer-bg {
+  background-image: url("/assets/image/bg-headerfooter.jpg");
+  max-width: 100%;
+  height: auto;
+}
+.footer {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  bottom: 0px;
+  z-index: 2;
+  position: sticky;
+}

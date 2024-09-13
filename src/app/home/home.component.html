@@ -1,0 +1,53 @@
+<div class="emptycart" *ngIf="homeProducts?.length === 0">
+  <h1> {{'THERE ARE NO ITEMS AVAIBLE' | translate}} </h1>
+  <br>
+  <a routerLink="/dashboard/home/tutto"> {{'BACK TO HOME' | translate}} </a>
+</div>
+<div *ngIf="homeProducts && homeProducts.length > 0">
+  <div class="container mt-5rem">
+    <div class="tag-filter">
+      <h2>{{'CLOTHING' | translate}}</h2><br>
+      <ul>
+        <li class="list-custom">
+          <a routerLink="/dashboard/home/tutto" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }">
+            {{'ALL' | translate}}
+          </a>
+        </li>
+        <li class="list-custom">
+          <a routerLink="/dashboard/home/t-shirt" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }">
+            {{'T-SHIRTS' | translate}}
+          </a>
+        </li>
+        <li class="list-custom">
+          <a routerLink="/dashboard/home/shoes" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }">
+            {{'SHOES' | translate}}
+          </a>
+        </li>
+        <li class="list-custom">
+          <a routerLink="/dashboard/home/shorts" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }">
+            {{'SHORTS' | translate}}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ms-10">
+      <div class="row">
+        <div class="col" *ngFor="let product of homeProducts">
+          <div class="card">
+            <img [src]="product.image" alt="{{ product.title }}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="{{ product.title }}">{{ product.title }}</h5>
+              <h5 class="card-category">{{ product.category.toUpperCase() | translate }}</h5>
+              <h5 class="card-category">{{product.gender.toUpperCase() | translate }}</h5>
+              <p class="card-text">{{ product.price | currency: 'EUR' }}</p>
+              <button class="btn btn-primary" (click)="addToCart(product);">{{'ADD TO CART' | translate}}</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

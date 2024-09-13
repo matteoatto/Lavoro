@@ -1,0 +1,197 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+}
+
+.card{
+  width: 8rem !important;
+  height: 100px;
+  position: relative;
+  left: 28px;
+}
+
+.emptycart {
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  left: 29%;
+  top: 20%;
+  text-align: center;
+}
+
+.emptycart a {
+  font-size: 20px;
+  font-weight: 10;
+  margin-left: 3%;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width: 18%;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  background-image: url("/assets/image/bg-headerfooter.jpg");
+}
+
+.emptycart a:hover {
+  background-color: rgb(182, 182, 255);
+}
+
+.bodycart h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+  font-family: "Font Awesome 6 Free";
+}
+
+.plus-icon, .minus-icon {
+  color: black;
+  cursor: pointer;
+}
+
+.plus-icon {
+  margin-left: 10px;
+}
+
+.minus-icon {
+  margin-right: 10px;
+}
+
+tr, th, td {
+  border: none;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+th {
+  background-color: gainsboro;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}
+
+.th-remove {
+  width: 10%;
+}
+
+.th-product {
+  width: 15%;
+}
+
+.th-description {
+  width: 30%;
+}
+
+.th-quantity {
+  width: 11%;
+}
+
+.th-price {
+  width: 30%;
+}
+
+.td-remove {
+  width: 5%;
+  text-align: center;
+}
+
+.td-product {
+  width: 20%;
+}
+
+
+.td-quantity {
+  width: 15%;
+}
+
+.td-price {
+  width: 15%;
+  padding-right: 17px;
+}
+
+.selectedItemsCounter {
+  text-align: center;
+  border: 1px solid black;
+  width: 50px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.removeIcon {
+  cursor: pointer;
+  color: red;
+}
+
+.total-price {
+  text-align: right;
+  margin-top: 20px;
+  position: relative;
+  left: 170px;
+}
+
+@media (min-width: 1200px) {
+  .h3, h3 {
+    font-size: 1.6rem;
+    position: relative;
+    right: 55px;
+  }
+}
+
+.btn-primary-order {
+  background-image: url("/assets/image/bg-headerfooter.jpg");
+  border: rgb(255, 255, 255) solid 1px;
+  width: 30%;
+  color: white;
+  cursor: pointer;
+}
+
+.row {
+  position: relative;
+  margin-top: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+table[_ngcontent-ng-c4001343471] {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}
+
+.ms-10 {
+  margin-left: 7% !important;
+  width: 100%;
+}
+

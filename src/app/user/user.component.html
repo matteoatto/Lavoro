@@ -1,0 +1,30 @@
+<img src="assets/image/user.png" alt="icona utente" class="user-icon">
+<div class="form-user">
+    <form  (ngSubmit)="onSubmit()">
+        <div class="mb-3 ">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="user.nome" >
+        </div>
+        <div class="mb-3">
+          <label for="cognome" class="form-label">Cognome</label>
+          <input type="text" class="form-control" id="cognome" name="cognome" [(ngModel)]="user.cognome">
+        </div>
+        <div class="mb-3">
+            <label for="dataDiNascita" class="form-label-data">Data Di Nascita</label>
+            <input type="text" class="form-control" id="dataDiNascita" name="dataDiNascita" [ngModel]="user.dataNascita | date: 'dd/MM/YYYY'">
+          </div>
+          <div class="mb-3">
+            <label for="indirizzo" class="form-label">Indirizzo</label>
+            <input type="text" class="form-control" id="indirizzo" name="indirizzo" [(ngModel)]="user.indirizzo">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" >
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="text" class="form-control" id="password" name="password" [(ngModel)]="user.password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-dimensioni" >Salva</button>
+      </form> 
+</div>

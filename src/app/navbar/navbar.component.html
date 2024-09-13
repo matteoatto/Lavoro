@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg custom-navbar nav-bg">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="/assets/image/wood-logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top logo">
+    </a>
+    <a class="navbar-brand" routerLink="/dashboard/home">WOODRIDGE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav">
+        <li class="nav-item" style="padding-right: 50px;">
+          <a class="nav-link active" aria-current="page" routerLink="uomo" routerLinkActive="active-link">{{'MAN' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="donna" routerLinkActive="active-link">{{'WOMAN' | translate}}</a>
+        </li>
+      </ul>
+      <form class="d-flex pl-90" role="search" (ngSubmit)="onSearch(searchInput.value, searchInput)">
+        <input #searchInput class="form-control me-2" type="search" placeholder="{{'WHAT ARE YOU SEARCHING FOR?' | translate}}" aria-label="Search">
+        <button class="btn btn-outline-success search-btn" type="submit">{{'SEARCH' | translate}}</button>
+      </form>
+      <div class="navbar-icons">
+        <i class="fa-solid fa-cart-shopping fa-xl i-cart" routerLink="carrello"></i>
+        <i class="fa-solid fa-circle fa-sm cartIcon"></i>
+        <div class="count-icon">{{ cartCount }}</div>
+        <i class="fa-regular fa-user fa-xl i-profile" routerLink="user"></i>
+
+        <div class="language-icons">
+          <img src='assets/image/flags/italy.png' alt="Italiano" width="20" height="20" class="flag-icon" (click)="changeLanguage('it')" [class.selected-flag]="currentLanguage === 'it'">
+          <img src="assets/image/flags/uk.png" alt="English" width="20" height="20" class="flag-icon" (click)="changeLanguage('en')" [class.selected-flag]="currentLanguage === 'en'">
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

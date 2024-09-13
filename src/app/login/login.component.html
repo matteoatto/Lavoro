@@ -1,0 +1,46 @@
+<div class="sfondo">
+  <img src="assets/image/woodridge.png" alt="logo" class="logo-custom">
+  <br>
+  <img src="assets/image/wood-logo.png" alt="logo" class="imgLogin-custom">
+   <span class="register-title">ACCEDI</span>
+  <div class="container">
+    <form #loginform="ngForm" (ngSubmit)="onSubmit()">
+      <div class="loginform">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" #email="ngModel"
+            pattern="^[a-zA-Z0-9._-]+@[a-zA-Z.-]+\.[a-zA-Z.-]{2,20}$" required>
+          @if (email.invalid && (email.dirty || email.touched)) {
+          <div class="text-danger">
+            @if (email.errors?.['required']) {
+             campo obbligatorio
+            }
+            @if (email.errors?.['pattern']) {
+            Email non valida
+            }
+          </div>
+          
+          }
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-group">
+            <input [type]="formType" class="form-control" id="password" name="password" [(ngModel)]="user.password"
+              required>
+            <span id="basic-addon2">
+              <button (click)="showCredentials()" type="button" class="btn btn-light">
+                <i class="fa-solid fa-eye eye"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-dimensioni" id="login" name="login" 
+          [disabled]="!loginform.valid">Accedi
+        </button>
+        <button type="button" class="btn btn-primary btn-dimensioni register" id="registrati" name="registrati" (click)="navigateToRegister()" >
+          Registrati
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

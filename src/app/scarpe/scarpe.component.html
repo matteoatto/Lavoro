@@ -1,0 +1,28 @@
+<div class="container mt-5rem">
+  <div class="tag-filter">
+    <h2>{{'CLOTHING' | translate}}</h2><br>
+    
+    <ul>
+      <li class="list-custom"><a routerLink="/dashboard/scarpe/tutto">{{'ALL' | translate}}</a></li>
+      <li class="list-custom"><a routerLink="/dashboard/scarpe/t-shirt">{{'T-SHIRTS' | translate}}</a></li>
+      <li class="list-custom"><a routerLink="/dashboard/scarpe/scarpe">{{'SHOES' | translate}}</a></li>
+      <li class="list-custom"><a routerLink="/dashboard/scarpe/pantaloncini">{{'SHORTS' | translate}}</a></li>
+    </ul>
+  </div>
+  <div class="ms-10">
+    <div class="row">
+      <div class="col" *ngFor="let product of scarpeProducts">
+        <div class="card">
+          <img [src]="product.image" alt="{{ product.title }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="{{ product.title }}">{{ product.title }}</h5>
+              <h5 class="card-category">{{ product.category.toUpperCase() | translate }}</h5>>
+              <h5 class="card-category">{{ product.gender.toUpperCase() | translate }}</h5>
+            <p class="card-text">{{ product.price | currency: 'EUR' }}</p>
+            <button class="btn btn-primary" (click)="addToCart(product)">{{'ADD TO CART' | translate}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

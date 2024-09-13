@@ -1,0 +1,35 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+}
+
+h5 {
+  font-size: 1.1rem !important;
+}
+
+.tag-filter {
+  width: 100%;
+  padding-top: 5%;
+  height: 100%;
+  padding-left: 50%;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  position: relative;
+  right: 200px;
+  bottom: 410px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+h2 {
+  position: relative;
+  bottom: 410px;
+  right: 23px;
+}

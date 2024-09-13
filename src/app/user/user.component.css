@@ -1,0 +1,40 @@
+* {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    box-sizing: border-box;
+  }
+
+.user-icon{
+    width: 175px;
+    height: 175px;
+    margin-left: 47%;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.form-user{
+margin-left: 43%;
+margin-right: 35%;
+
+}
+
+.form-label{
+margin-left: 38%;
+}
+
+.form-label-data{
+    margin-left: 33%;
+}
+
+.btn-dimensioni {
+    margin-top: 20px;
+    width: 50%;
+    background-image: url("/assets/image/bg-headerfooter.jpg") !important;
+    border: rgb(255, 255, 255) solid 1px;
+    position: relative;
+   left:80px ;
+  }
+
+  .form-control{
+    border: 2px solid black;
+  }

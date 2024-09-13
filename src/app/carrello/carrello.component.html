@@ -1,0 +1,68 @@
+<div class="emptycart" *ngIf="cartItems?.length === 0">
+  <h1>{{'YOUR SHOPPING CART IS EMPTY' | translate}} </h1>
+  <br>
+  <a routerLink="/dashboard/home/tutto"> {{'BACK TO HOME' | translate}} </a>
+</div>
+<div *ngIf="cartItems && cartItems.length > 0">
+  <div class="container mt-5rem">
+    <div class="ms-10">
+      <div class="row">
+        <div class="bodycart">
+          <h1>{{'CART' | translate}}</h1>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="th-remove">{{'ACTION' | translate}}</th>
+                <th scope="col" class="th-product">{{'PRODUCT' | translate}}</th>
+                <th scope="col" class="th-description">{{'DESCRIPTION' | translate}}</th>
+                <th scope="col" class="th-quantity">{{'UNIT PRICE' | translate}}</th>
+                <th scope="col" class="th-quantity">{{'QUANTITY' | translate}}</th>
+                <th scope="col" class="th-price">{{'TOTAL PRICE' | translate}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of cartItems">
+                <td class="td-remove">
+                  <i class="fa-solid fa-x removeIcon" (click)="removeFromCart(product)"></i>
+                </td>
+                <td class="td-product">
+                  <div class="card">
+                    <img [src]="product.image" alt="{{ product.title }}" class="card-img-top">
+                  </div>
+                </td>
+                <td class="td-description">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ product.title | translate }}</h5>
+                    <h5 class="card-category">{{ product.category.toUpperCase() | translate }}</h5>
+                    <h5 class="card-category">{{product.gender.toUpperCase() | translate }}</h5>
+                  </div>
+                </td>
+                <td>
+                  <p class="card-text">{{ product.price | currency: 'EUR' }}</p>
+                </td>
+                <td class="td-quantity">
+                  <div class="quantity-controls">
+                    <i class="fa-solid fa-minus minus-icon" (click)="reduceProduct(product)"></i>
+                    <div class="selectedItemsCounter">{{ product.quantity }}</div>
+                    <i class="far fa-plus plus-icon" (click)="increaseProduct(product)"></i>
+                  </div>
+                </td>
+                <td class="td-price">
+                  <p class="card-text">{{ product.price * product.quantity | currency: 'EUR' }}</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" class="total-price">
+                  <h3>{{'TOTAL PRICE' | translate}}: {{ getTotalPrice() | currency: 'EUR' }}</h3>
+                  <button class="btn btn-primary-order" (click)="orderCart()">{{'ORDER' | translate}}</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

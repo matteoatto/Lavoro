@@ -1,0 +1,38 @@
+{
+   "ACTION": "Action",
+    "PRODUCT": "Product",
+    "DESCRIPTION": "Description",
+    "UNIT PRICE": "Unit Price",
+    "QUANTITY": "Quantity",
+    "TOTAL PRICE": "Total Price",
+    "YOUR SHOPPING CART IS EMPTY" : "Your shopping cart is empty",
+    "BACK TO HOME" : " Back to home",
+    "CART" : "Cart",
+    "ORDER" : "Order",
+    "CLOTHING":"Clothing",
+    "THERE ARE NO ITEMS AVAIBLE": "There are no items avaible",
+    "ALL": "All",
+    "T-SHIRTS": "T-shirts",
+    "T-SHIRT":"T-shirt",
+    "SHOES": "Shoes",
+    "SHORTS": "Shorts",
+    "ADD TO CART":"Add to cart",
+    "SEARCH":"Search",
+    "MAN": "Man",
+    "WOMAN": "Woman",
+    "WHAT ARE YOU SEARCHING FOR?":"What are you searching for?",
+    "CATEGORY":"Category",
+    "CONFIRM":"Confirm",
+    "CANCEL":"Cancel",
+
+    "SWEETALERT": {
+        "CONFIRM_BUTTON": "Confirm",
+        "CANCEL_BUTTON": "Cancel",
+        "REMOVE_TITLE": "Are you sure?",
+        "REMOVE_TEXT": "Do you really want to remove this item from the cart?"
+      }
+  }
+  
+
+
+

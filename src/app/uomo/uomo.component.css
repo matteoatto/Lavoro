@@ -1,0 +1,59 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+}
+
+h2 {
+  position: relative;
+  right: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+.filter2 {
+  display: flex;
+  list-style: none;
+  position: relative;
+  right: 200px;
+}
+
+.btn-primary {
+  background-image: url("/assets/image/bg-headerfooter.jpg");
+  border: rgb(255, 255, 255) solid 1px;
+  width: 100%;
+}
+
+.active-link {
+  font-weight: bold;
+  font-size: 19px;
+  color: white !important;
+  background-image: url("/assets/image/bg-headerfooter.jpg");
+  background-size: cover;
+  background-position: center;
+  display: block;
+  border-radius: 5px;
+}
+
+.emptycart a {
+  font-size: 20px;
+  margin-left: 2%;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width: 16%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  height: 45px;
+  padding-top: 1% !important;
+  position: relative !important;
+  left: 33% !important;
+}
+
+.emptyPage{
+  position: relative;
+  top: 100px;
+}

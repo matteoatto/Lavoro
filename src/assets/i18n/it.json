@@ -1,0 +1,32 @@
+{
+    "ACTION": "Azione",
+    "PRODUCT": "Prodotto",
+    "DESCRIPTION": "Descrizione",
+    "UNIT PRICE": "Prezzo unitario",
+    "QUANTITY": "Quantità",
+    "TOTAL PRICE": "Prezzo totale",
+    "YOUR SHOPPING CART IS EMPTY" : "Il carrello è vuoto",
+    "BACK TO HOME" : "Torna alla home",
+    "CART": "Carrello",
+    "ORDER": "Ordina",
+    "CLOTHING": "Abbigliamento",
+    "THERE ARE NO ITEMS AVAIBLE": "Non ci sono articoli disponibili",
+    "ALL": "Tutto",
+    "T-SHIRTS": "Maglie",
+    "T-SHIRT":"Maglia",
+    "SHOES": "Scarpe",
+    "SHORTS": "Pantaloncini",
+    "ADD TO CART": "Aggiungi al carrello",
+    "SEARCH": "Cerca",
+    "MAN": "Uomo",
+    "WOMAN": "Donna",
+    "WHAT ARE YOU SEARCHING FOR?":"Cosa stai cercando?",
+    "CATEGORY":"Categoria",
+
+    "SWEETALERT": {
+        "CONFIRM_BUTTON": "Conferma",
+        "CANCEL_BUTTON": "Annulla",
+        "REMOVE_TITLE": "Sei sicuro?",
+        "REMOVE_TEXT": "Vuoi rimuovere questo elemento dal carrello?"
+      }
+}

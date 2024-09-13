@@ -1,0 +1,40 @@
+.sidebar-bg {
+  background-image: url("/assets/image/bg-sidebar.jpg");
+  max-width: 100%;
+  height: auto;
+}
+.sidebar-slider {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  bottom: 0px;
+  width: 175px;
+  border: 1px solid black;
+  z-index: 2;
+}
+
+.sidebar-content {
+  position: sticky;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 10%;
+  margin-top: 80px;
+}
+
+.sidebar-content > a {
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.active-link {
+  font-weight: bold;
+  border-bottom: 1px solid white;
+}

@@ -1,0 +1,74 @@
+<div class="sfondo">
+    <img src="assets/image/woodridge.png" alt="logo" class="logo-custom">
+    <br>
+    <img src="assets/image/wood-logo.png" alt="logo" class="imgLogin-custom">
+    <div class="container">
+      <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="register-title">REGISTRAZIONE</div>
+        <div class="loginform">
+          <div class="row">
+
+            <div class="col-md-4">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="user.nome" #nome="ngModel" required>
+              <div *ngIf="nome.invalid && (nome.dirty || nome.touched)" class="text-danger">
+                Campo obbligatorio
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <label for="cognome" class="form-label">Cognome</label>
+              <input type="text" class="form-control" id="cognome" name="cognome" [(ngModel)]="user.cognome" #cognome="ngModel" required>
+              <div *ngIf="cognome.invalid && (cognome.dirty || cognome.touched)" class="text-danger">
+                Campo obbligatorio
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-4">
+              <label for="dataNascita" class="form-label">Data di Nascita</label>
+              <input type="date" class="form-control" id="dataNascita" name="dataNascita" [(ngModel)]="user.dataNascita" #dataNascita="ngModel" required>
+              <div *ngIf="dataNascita.invalid && (dataNascita.dirty || dataNascita.touched)" class="text-danger">
+                Campo obbligatorio
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <label for="indirizzo" class="form-label">Indirizzo</label>
+              <input type="text" class="form-control" id="indirizzo" name="indirizzo" [(ngModel)]="user.indirizzo" #indirizzo="ngModel" required>
+              <div *ngIf="indirizzo.invalid && (indirizzo.dirty || indirizzo.touched)" class="text-danger">
+                Campo obbligatorio
+              </div>
+            </div>
+          </div>
+  
+           <div class="row">
+          <div class="col-md-4" >
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" #email="ngModel"
+              pattern="^[a-zA-Z0-9._-]+@[a-zA-Z.-]+\.[a-zA-Z.-]{2,20}$" required>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+              <div *ngIf="email.errors?.['required']">Campo obbligatorio</div>
+              <div *ngIf="email.errors?.['pattern']">Email non valida</div>
+            </div>
+          </div>
+  
+            <div class="col-md-4">
+              <label for="password" class="form-label psw">Password</label>
+              <div class="input-group">
+                <input [type]="formType" class="form-control" id="password" name="password" [(ngModel)]="user.password" #password="ngModel" required>
+                <span id="basic-addon2">
+                  <button (click)="togglePasswordVisibility()" type="button" class="btn btn-light">
+                    <i class="fa-solid fa-eye eye"></i>
+                  </button>
+                </span>
+              </div>
+            </div>     
+          </div>
+          <button type="submit" class="btn btn-primary btn-dimensioni" [disabled]="!registerForm.valid" >Registrati</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
